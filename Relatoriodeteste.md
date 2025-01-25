@@ -64,6 +64,15 @@ Foram testados também casos de borda, como limites de caracteres e valores inv�
 
 ---
 
+### **Casos de Borda**
+
+| ID   | Cenário                   | Etapas do Teste                                          | Entrada                                             | Resultado Esperado                          | Status  |
+|------|---------------------------|---------------------------------------------------------|----------------------------------------------------|---------------------------------------------|---------|
+| CB01 | Limite Máximo de Caracteres | Inserir dados no limite máximo de caracteres permitido. | Nome: "A" * 50, E-mail: "jefter@gmail.com"          | Cadastro ou operação realizada com sucesso.  | **Passou** |
+| CB02 | Excesso de Caracteres     | Inserir dados que excedam o limite máximo permitido.    | Nome: "A" * 51                                      | Mensagem: "Campo excede o limite de caracteres permitidos". | **Falhou** |
+
+---
+
 ## 3. Resumo de Resultados
 
 | Funcionalidade            | Testes Executados | Testes Bem-Sucedidos | Testes com Falha | Percentual de Sucesso |
@@ -71,6 +80,7 @@ Foram testados também casos de borda, como limites de caracteres e valores inv�
 | **Cadastro**               | 8                 | 5                    | 3                | 62,5%                 |
 | **Login**                  | 6                 | 4                    | 2                | 66,7%                 |
 | **Processo de Compra**     | 8                 | 3                    | 5                | 37,5%                 |
+| **Casos de borda**         | 2                 | 0                    | 2                | 0,0%               |
 
 ---
 
