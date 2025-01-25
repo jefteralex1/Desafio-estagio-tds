@@ -20,9 +20,6 @@
    3.4. [Casos de Borda](#casos-de-borda)  
 
 4. [Critérios de Cobertura](#4-critérios-de-cobertura)  
-5. [Relatórios de Teste](#5-relatórios-de-teste)  
-6. [Conclusão](#6-conclusão)
-
 ---
 
 ## **1. Introdução**
