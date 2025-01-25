@@ -4,24 +4,24 @@
 
 ## **Índice**
 
-1. [Introdução](#introdução)  
+1. [Introdução](#1-introdução)  
    1.1. [Objetivo](#objetivo)  
    1.2. [Estratégia](#estratégia)  
 
-2. [Histórias de Usuário](#histórias-de-usuário)  
+2. [Histórias de Usuário](#2-histórias-de-usuário)  
    2.1. [Cadastro](#cadastro)  
    2.2. [Login](#login)  
    2.3. [Processo de Compra](#processo-de-compra)  
 
-3. [Casos de Teste](#casos-de-teste)  
+3. [Casos de Teste](#3-casos-de-teste)  
    3.1. [Cadastro](#cadastro)  
    3.2. [Login](#login)  
    3.3. [Processo de Compra](#processo-de-compra)  
    3.4. [Casos de Borda](#casos-de-borda)  
 
-4. [Critérios de Cobertura](#critérios-de-cobertura)  
-5. [Relatórios de Teste](#relatórios-de-teste)  
-6. [Conclusão](#conclusão)
+4. [Critérios de Cobertura](#4-critérios-de-cobertura)  
+5. [Relatórios de Teste](#5-relatórios-de-teste)  
+6. [Conclusão](#6-conclusão)
 
 ---
 
