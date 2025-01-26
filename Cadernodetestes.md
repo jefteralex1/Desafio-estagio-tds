@@ -17,7 +17,7 @@
    3.1. [Cadastro](#cadastro)  
    3.2. [Login](#login)  
    3.3. [Processo de Compra](#processo-de-compra)  
-   3.4. [Casos de Borda](#casos-de-borda)  
+   3.4. [Casos extremos](#casos-extremos)  
 
 4. [Critérios de Cobertura](#4-critérios-de-cobertura)  
 ---
@@ -139,7 +139,7 @@ Como **usuário logado**, quero **ver a resposta do sistema ao tentar comprar se
 
 ---
 
-### **Casos de Borda**
+### **Casos extremos**
 
 | ID    | Cenário                       | Etapas do Teste                                                                 | Entrada                                   | Resultado Esperado                      |
 |-------|-------------------------------|--------------------------------------------------------------------------------|------------------------------------------|-----------------------------------------|
