@@ -143,8 +143,8 @@ Como **usuário logado**, quero **ver a resposta do sistema ao tentar comprar se
 
 | ID    | Cenário                       | Etapas do Teste                                                                 | Entrada                                   | Resultado Esperado                      |
 |-------|-------------------------------|--------------------------------------------------------------------------------|------------------------------------------|-----------------------------------------|
-| **CB01** | Limite Máximo de Caracteres   | Inserir dados no limite máximo de caracteres permitido.                         | Nome: "A" * 50, E-mail: "jefter@gmail.com" | Cadastro ou operação realizada com sucesso. |
-| **CB02** | Excesso de Caracteres         | Inserir dados que excedam o limite máximo permitido.                           | Nome: "A" * 51                           | Mensagem: "Campo excede o limite de caracteres permitidos". |
+| **CE01** | Limite Máximo de Caracteres   | Inserir dados no limite máximo de caracteres permitido.                         | Nome: "A" * 50, E-mail: "jefter@gmail.com" | Cadastro ou operação realizada com sucesso. |
+| **CE02** | Excesso de Caracteres         | Inserir dados que excedam o limite máximo permitido.                           | Nome: "A" * 51                           | Mensagem: "Campo excede o limite de caracteres permitidos". |
 
 ---
 
