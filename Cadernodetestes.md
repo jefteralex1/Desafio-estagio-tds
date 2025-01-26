@@ -92,6 +92,20 @@ Como **usuário logado**, quero **ver a resposta do sistema ao tentar comprar se
   - O carrinho estiver vazio.  
   - O pagamento for cancelado ou inválido.
 
+### **Casos Extremos**
+
+**Cenário: Limite Máximo de Caracteres**  
+Como **usuário**, quero **poder preencher campos com o número máximo de caracteres permitidos (50 caracteres)** para garantir que o sistema aceite dados no limite.
+
+**Critérios de Aceitação**  
+- O sistema deve permitir a inserção de dados no limite de caracteres, sem erro ou truncamento.
+
+**Cenário: Excesso de Caracteres**  
+Como **usuário**, quero **ver a resposta do sistema ao tentar inserir dados que excedem o limite de caracteres** para evitar erros inesperados.
+
+**Critérios de Aceitação**  
+- O sistema deve exibir uma mensagem de erro clara quando o número de caracteres exceder o limite permitido.
+
 ---
 
 ## **3. Casos de Teste**
