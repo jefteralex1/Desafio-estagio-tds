@@ -86,7 +86,7 @@ Foram testados também casos de borda, como limites de caracteres e valores inv�
 
 ---
 
-### **Casos de Borda**
+### **Casos Extremos**
 
 | ID   | Cenário                   | Etapas do Teste                                          | Entrada                                             | Resultado Esperado                          | Status  |
 |------|---------------------------|---------------------------------------------------------|----------------------------------------------------|---------------------------------------------|---------|
