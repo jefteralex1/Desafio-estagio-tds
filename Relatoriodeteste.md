@@ -1,5 +1,29 @@
 # Relatório de Testes - Cadastro, Login e Processo de Compra
 
+---
+
+## **Índice**
+
+1. [Resumo](#1-Resumo)
+   1.1. [Objetivo](#Objetivo)
+   1.2. [Funcionalidades Testadas](#Funcionalidades-Testadas)  
+   1.3. [Estratégia de Testes](#Estratégia-de-Testes)  
+
+3. [Detalhamento dos Casos de Teste Executados](#2-Detalhamento-dos-Casos-de-Teste Executados)  
+   2.1. [Cadastro](#cadastro)  
+   2.2. [Login](#login)  
+   2.3. [Processo de Compra](#processo-de-compra)
+   2.4. [Casos extremos](#Casos-extremos)  
+
+5. [Casos de Teste](#3-casos-de-teste)  
+   3.1. [Cadastro](#cadastro)  
+   3.2. [Login](#login)  
+   3.3. [Processo de Compra](#processo-de-compra)  
+   3.4. [Casos extremos](#casos-extremos)  
+
+6. [Critérios de Cobertura](#4-critérios-de-cobertura)  
+---
+
 ## 1. Resumo
 
 ### Objetivo:
