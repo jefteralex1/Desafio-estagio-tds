@@ -4,24 +4,22 @@
 
 ## **Índice**
 
-1. [Resumo](#1-Resumo)
-   1.1. [Objetivo](#Objetivo)
-   1.2. [Funcionalidades Testadas](#Funcionalidades-Testadas)  
-   1.3. [Estratégia de Testes](#Estratégia-de-Testes)  
+1. [Resumo](#1-resumo)  
+   1.1. [Objetivo](#objetivo)  
+   1.2. [Funcionalidades Testadas](#funcionalidades-testadas)  
+   1.3. [Estratégia de Testes](#estrategia-de-testes)  
 
-3. [Detalhamento dos Casos de Teste Executados](#2-Detalhamento-dos-Casos-de-Teste Executados)  
+2. [Detalhamento dos Casos de Teste Executados](#2-detalhamento-dos-casos-de-teste-executados)  
    2.1. [Cadastro](#cadastro)  
    2.2. [Login](#login)  
-   2.3. [Processo de Compra](#processo-de-compra)
-   2.4. [Casos extremos](#Casos-extremos)  
+   2.3. [Processo de Compra](#processo-de-compra)  
+   2.4. [Casos Extremos](#casos-extremos)  
 
-5. [Casos de Teste](#3-casos-de-teste)  
-   3.1. [Cadastro](#cadastro)  
-   3.2. [Login](#login)  
-   3.3. [Processo de Compra](#processo-de-compra)  
-   3.4. [Casos extremos](#casos-extremos)  
+3. [Resumo de Resultados](#3-resumo-de-resultados)  
+4. [Análise de Falhas](#4-analise-de-falhas)  
+5. [Conclusão](#5-conclusao)  
+6. [Recomendações](#6-recomendacoes)  
 
-6. [Critérios de Cobertura](#4-critérios-de-cobertura)  
 ---
 
 ## 1. Resumo
