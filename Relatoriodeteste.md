@@ -25,19 +25,21 @@
 ## 1. Resumo
 
 ### Objetivo:
-O objetivo deste relatório é apresentar os resultados dos testes realizados nas funcionalidades de **Cadastro**, **Login**, e **Processo de Compra** no site [Automation Exercise](https://www.automationexercise.com/). Os testes foram realizados com base nos casos de uso definidos previamente, com foco em garantir a estabilidade, usabilidade e segurança dessas funcionalidades.
+O objetivo deste relatório é apresentar os resultados dos testes realizados nas funcionalidades de **Cadastro**, **Login**, **Processo de Compra** e alguns **Casos extremos** no site [Automation Exercise](https://www.automationexercise.com/). Os testes foram realizados com base nos casos de uso definidos previamente, com foco em garantir a estabilidade, usabilidade e segurança dessas funcionalidades.
 
 ### Funcionalidades Testadas:
 - **Cadastro de Usuário**
 - **Login de Usuário**
 - **Processo de Compra**
+- **Casos extremos**
+
 
 ### Estratégia de Testes:
 Os testes foram realizados em dois tipos de fluxos:
 - **Fluxo Positivo:** Cenários onde o usuário segue o fluxo correto de uso do sistema.
 - **Fluxo Negativo:** Cenários onde o usuário fornece dados inválidos ou tenta contornar o sistema.
 
-Foram testados também casos de borda, como limites de caracteres e valores inválidos nos campos obrigatórios.
+Foram testados também Casos extremos, como limites de caracteres e valores inválidos nos campos obrigatórios.
 
 ---
 
