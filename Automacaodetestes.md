@@ -12,9 +12,9 @@ Este repositório contém testes automatizados para verificar as funcionalidades
    - [Login](#login)
    - [Processo de compra](#processo-de-compra)  
 3. [Código](#3-código)  
-   - [Testes de Cadastro](#cadastro)  
-   - [Testes de Login](#login)
-   - [Testes de Login](#Processo-de-compra)
+   - [Testes de Cadastro](#Testes-de-cadastro)  
+   - [Testes de Login](#Testes-de-login)
+   - [Testes de Login](#Testes-de-Processo-de-compra)
 4. [Resultado](#4-resultados)
 
 ---
@@ -147,7 +147,7 @@ if __name__ == "__main__":
         driver.quit()
 ```
 
-### Login:
+### Testes de Login:
 
 ```python
 from selenium import webdriver
@@ -219,7 +219,7 @@ if __name__ == "__main__":
         driver.quit()
 ```
 
-### Processo de compra:
+### Testes de Processo de compra:
 ```Python
 from selenium import webdriver
 from selenium.webdriver.common.by import By
