@@ -6,24 +6,27 @@ Este repositório contém testes automatizados para verificar as funcionalidades
 
 ## Índice
 
-1. [Pré-requisitos](#pré-requisitos)  
-2. [Casos de Teste Implementados](#casos-de-teste-implementados)  
+1. [Pré-requisitos](#1-pré-requisitos)  
+2. [Casos de Teste Implementados](#2-casos-de-teste-implementados)  
    - [Cadastro](#cadastro)  
    - [Login](#login)  
-3. [Código](#código)  
-   - [Testes de Cadastro](#testes-de-cadastro)  
-   - [Testes de Login](#testes-de-login)
+3. [Código](#3-código)  
+   - [Testes de Cadastro](#cadastro)  
+   - [Testes de Login](#login)
+   - [Testes de Login](#Processo-de-compra)
 
 ---
 
-## Pré-requisitos
+## 1. Pré-requisitos
 
 - **Python**: Versão 3.7 ou superior.
 - **Selenium**: Instale via pip:
   ```bash
   pip install selenium
 
-## Casos de Teste Implementados
+---
+
+## 2. Casos de Teste Implementados
 ### Cadastro:
 1. **Cadastro Válido:** Cadastrar um novo usuário com dados válidos.
 2. **E-mail Duplicado:** Testar a mensagem de erro ao cadastrar um e-mail já existente.
@@ -43,9 +46,15 @@ Este repositório contém testes automatizados para verificar as funcionalidades
 5. **Tempo de Bloqueio:** Verificar bloqueio após várias tentativas de login com senha errada.
 6. **Timeout na Sessão:** Validar a expiração da sessão após inatividade de 30 minutos.
 
+### Processo de Compra:
+1. **Compra Válida:** Realizar a compra de um produto com um cartão de crédito válido.
+2. **Carrinho Vazio:** Verificar o comportamento ao acessar o carrinho vazio.
+3. **Cartão Inválido:** Tentar realizar uma compra com um cartão de crédito inválido.
+4. **Cartão Vencido:** Tentar realizar uma compra com um cartão de crédito vencido.
+
 ---
 
-## Código
+## 3. Código
 ### Testes de Cadastro: 
 ```python
 from selenium import webdriver
@@ -54,7 +63,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 # Configuração do WebDriver
-driver = webdriver.Chrome()  # Certifique-se de ter o ChromeDriver instalado e configurado.
+driver = webdriver.Chrome()
 
 # URL base do site de teste
 base_url = "https://automationexercise.com/signup"
@@ -145,7 +154,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 # Configuração do WebDriver
-driver = webdriver.Chrome()  # Certifique-se de ter o ChromeDriver instalado e configurado.
+driver = webdriver.Chrome()
 
 # URL base do site de teste
 base_url = "https://automationexercise.com/login"
@@ -206,3 +215,131 @@ if __name__ == "__main__":
         print("Todos os testes foram concluídos com sucesso.")
     finally:
         driver.quit()
+```
+
+### Processo de compra:
+```Python
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import time
+
+# Configuração do WebDriver
+def setup_driver():
+    driver = webdriver.Chrome()
+    driver.maximize_window()
+    base_url = "https://automationexercise.com"
+    return driver, base_url
+
+# Teste PC01: Compra Válida
+def test_valid_purchase(driver, base_url):
+    driver.get(base_url)
+    WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.LINK_TEXT, "Products"))
+    ).click()  # Ir para a página de produtos
+    WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.CLASS_NAME, "add-to-cart"))
+    ).click()  # Clicar em adicionar ao carrinho
+    WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.LINK_TEXT, "View Cart"))
+    ).click()  # Ir para o carrinho
+
+    assert "Product successfully added to your cart" in driver.page_source
+    WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.LINK_TEXT, "Proceed To Checkout"))
+    ).click()
+
+    # Preenchendo os detalhes de pagamento (simulados)
+    driver.find_element(By.ID, "name-on-card").send_keys("Jefter Silva")
+    driver.find_element(By.ID, "card-number").send_keys("1111-2222-3333-4444")
+    driver.find_element(By.ID, "cvc").send_keys("123")
+    driver.find_element(By.ID, "expiry-month").send_keys("10")
+    driver.find_element(By.ID, "expiry-year").send_keys("2026")
+    driver.find_element(By.ID, "submit").click()
+
+    # Validar se o pedido foi concluído
+    WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Your order has been placed successfully!')]"))
+    )
+
+# Teste PC02: Carrinho Vazio
+def test_empty_cart(driver, base_url):
+    driver.get(f"{base_url}/view_cart")  # Acessar diretamente a página do carrinho
+    WebDriverWait(driver, 10).until(
+        EC.title_is("Shopping Cart"))  # Verificar se está na página do carrinho
+    assert "Your Cart is Empty" in driver.page_source  # Certificar que o carrinho está vazio
+
+# Teste PC03: Cartão Inválido
+def test_invalid_card(driver, base_url):
+    driver.get(base_url)
+    WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.LINK_TEXT, "Products"))
+    ).click()
+    WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.CLASS_NAME, "add-to-cart"))
+    ).click()
+    WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.LINK_TEXT, "View Cart"))
+    ).click()
+    WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.LINK_TEXT, "Proceed To Checkout"))
+    ).click()
+
+    # Preenchendo os detalhes de pagamento com cartão inválido
+    driver.find_element(By.ID, "name-on-card").send_keys("Jefter Silva")
+    driver.find_element(By.ID, "card-number").send_keys("0000-0000-0000-0000")
+    driver.find_element(By.ID, "cvc").send_keys("123")
+    driver.find_element(By.ID, "expiry-month").send_keys("10")
+    driver.find_element(By.ID, "expiry-year").send_keys("2026")
+    driver.find_element(By.ID, "submit").click()
+
+    # Validar mensagem de erro
+    WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Número de cartão inválido')]"))
+    )
+
+# Teste PC04: Cartão Vencido
+def test_expired_card(driver, base_url):
+    driver.get(base_url)
+    WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.LINK_TEXT, "Products"))
+    ).click()
+    WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.CLASS_NAME, "add-to-cart"))
+    ).click()
+    WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.LINK_TEXT, "View Cart"))
+    ).click()
+    WebDriverWait(driver, 10).until(
+        EC.element_to_be_clickable((By.LINK_TEXT, "Proceed To Checkout"))
+    ).click()
+
+    # Preenchendo os detalhes de pagamento com cartão vencido
+    driver.find_element(By.ID, "name-on-card").send_keys("Jefter Silva")
+    driver.find_element(By.ID, "card-number").send_keys("1111-2222-3333-4444")
+    driver.find_element(By.ID, "cvc").send_keys("123")
+    driver.find_element(By.ID, "expiry-month").send_keys("10")
+    driver.find_element(By.ID, "expiry-year").send_keys("2024")
+    driver.find_element(By.ID, "submit").click()
+
+    # Validar mensagem de erro
+    WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.XPATH, "//*[contains(text(), 'Cartão vencido')]"))
+    )
+
+# Execução dos testes
+def run_tests():
+    driver, base_url = setup_driver()
+    try:
+        test_valid_purchase(driver, base_url)
+        test_empty_cart(driver, base_url)
+        test_invalid_card(driver, base_url)
+        test_expired_card(driver, base_url)
+        print("Todos os testes foram concluídos com sucesso.")
+    finally:
+        driver.quit()
+
+if __name__ == "__main__":
+    run_tests()
