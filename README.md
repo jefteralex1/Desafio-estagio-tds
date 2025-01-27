@@ -5,8 +5,6 @@ Este repositório contém a resolução do desafio do processo seletivo para o e
 
 O repositório está organizado da seguinte forma:
 
-- **Cadernodetestes.md**: Documento com os testes realizados durante a implementação da solução.
-- **Relatoriodeteste.md**: Relatório detalhado sobre os testes realizados, incluindo resultados e observações.
-- **README.md**: Este arquivo, que contém informações sobre o repositório.
-
-
+- [Cadernodetestes.md](Cadernodetestes.md): Documento com os testes realizados durante a implementação da solução.
+- [Relatoriodeteste.md](Relatoriodeteste.md): Relatório detalhado sobre os testes realizados, incluindo resultados e observações.
+- [Resolução.md](Resolução.md):  Este arquivo, que contém informações sobre o repositório.
