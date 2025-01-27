@@ -14,7 +14,7 @@ Este repositório contém testes automatizados para verificar as funcionalidades
 3. [Código](#3-código)  
    - [Testes de Cadastro](#Testes-de-cadastro)  
    - [Testes de Login](#Testes-de-login)
-   - [Testes de Login](#Testes-de-Processo-de-compra)
+   - [Testes de Processo de compra](#Testes-de-Processo-de-compra)
 4. [Resultado](#4-resultados)
 
 ---
