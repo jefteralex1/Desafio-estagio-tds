@@ -14,6 +14,7 @@ Este repositório contém testes automatizados para verificar as funcionalidades
    - [Testes de Cadastro](#cadastro)  
    - [Testes de Login](#login)
    - [Testes de Login](#Processo-de-compra)
+4. [Resultado](#4-Resultado)
 
 ---
 
@@ -343,3 +344,9 @@ def run_tests():
 
 if __name__ == "__main__":
     run_tests()
+```
+
+---
+
+## 4. Resultados
+Os resultados destes e de outros testes podem ser consultados no [arquivo](automacaodetestes.md)
