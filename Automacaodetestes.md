@@ -10,7 +10,7 @@ Este repositório contém testes automatizados para verificar as funcionalidades
 2. [Casos de Teste Implementados](#2-casos-de-teste-implementados)  
    - [Cadastro](#cadastro)  
    - [Login](#login)
-   - [Processo de compra](#processo-de-compra[)  
+   - [Processo de compra](#processo-de-compra)  
 3. [Código](#3-código)  
    - [Testes de Cadastro](#cadastro)  
    - [Testes de Login](#login)
