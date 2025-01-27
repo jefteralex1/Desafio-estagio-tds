@@ -350,4 +350,4 @@ if __name__ == "__main__":
 ---
 
 ## 4. Resultados
-Os resultados destes e de outros testes podem ser consultados no [arquivo](automacaodetestes.md)
+Os resultados destes e de outros testes podem ser consultados no [arquivo](Relatoriodeteste.md)
