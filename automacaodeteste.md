@@ -1,10 +1,10 @@
 # Automação de Testes com Selenium
 
-Este arquivo contém exemplos de testes automatizados usando **Selenium WebDriver** com Python. O objetivo é realizar testes no site **Automation Exercise** para verificar funcionalidades como cadastro de usuários.
+Este arquivo contém exemplos de testes automatizados usando **Selenium WebDriver** com Python. O objetivo é realizar testes no site [Automation Exercise](https://www.automationexercise.com/), para verificar funcionalidades como cadastro de usuários.
 
 ## **Índice**
 
-1. [Resumo](#1-Execucao)   
+1. [Execução](#1-execução)   
 2. [Código](#2-Código)  
 3. [Conclusão](#3-Conclusão)    
 
