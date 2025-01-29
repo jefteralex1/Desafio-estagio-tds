@@ -2,13 +2,21 @@
 
 Este arquivo contém exemplos de testes automatizados usando **Selenium WebDriver** com Python. O objetivo é realizar testes no site **Automation Exercise** para verificar funcionalidades como cadastro de usuários.
 
+## **Índice**
+
+1. [Resumo](#1-Execucao)   
+2. [Código](#2-Código)  
+3. [Conclusão](#3-Conclusão)    
+
+---
+
 ## 1. Execução
 
 Executei o código no google colab, instalando as seguintes dependências:
 - **selenium**: A biblioteca que permite a automação de navegação em sites.
 - **webdriver-manager**: Ferramenta para gerenciar o download do ChromeDriver.
 
-## código
+## 2. Código
 
 ```python
 from selenium import webdriver
